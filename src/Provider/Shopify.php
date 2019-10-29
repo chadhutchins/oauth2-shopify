@@ -48,17 +48,17 @@ class Shopify extends AbstractProvider
 
     public function getBaseAuthorizationUrl()
     {
-        return 'https://'.$this->shop.'.shopify.com/admin/oauth/authorize';
+        return 'https://'.$this->shop.'.myshopify.com/admin/oauth/authorize';
     }
 
     public function getBaseAccessTokenUrl(array $params)
     {
-        return 'https://'.$this->shop.'.shopify.com/admin/oauth/access_token';
+        return 'https://'.$this->shop.'.myshopify.com/admin/oauth/access_token';
     }
 
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return 'https://'.$this->shop.'.shopify.com/admin/shop.json';
+        return 'https://'.$this->shop.'.myshopify.com/admin/shop.json';
     }
 
     public function getAuthorizationParameters(array $options)
