@@ -79,6 +79,8 @@ class Shopify extends AbstractProvider
         return [
             'read_content',
             'read_products',
+            'read_customers',
+            'read_orders',
         ];
     }
 
