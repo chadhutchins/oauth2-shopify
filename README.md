@@ -1,8 +1,8 @@
 # Shopify Provider for OAuth 2.0 Client
 
-[![Latest Stable Version](https://poser.pugx.org/multidimensional/oauth2-shopify/v/stable)](https://packagist.org/packages/multidimensional/oauth2-shopify)
-[![Total Downloads](https://poser.pugx.org/multidimensional/oauth2-shopify/downloads)](https://packagist.org/packages/multidimensional/oauth2-shopify)
-[![License](https://poser.pugx.org/multidimensional/oauth2-shopify/license)](https://packagist.org/packages/multidimensional/oauth2-shopify)
+[![Latest Stable Version](https://poser.pugx.org/chadhutchins/oauth2-shopify/v/stable)](https://packagist.org/packages/chadhutchins/oauth2-shopify)
+[![Total Downloads](https://poser.pugx.org/chadhutchins/oauth2-shopify/downloads)](https://packagist.org/packages/chadhutchins/oauth2-shopify)
+[![License](https://poser.pugx.org/chadhutchins/oauth2-shopify/license)](https://packagist.org/packages/chadhutchins/oauth2-shopify)
 [![Build Status](https://travis-ci.org/multidimension-al/oauth2-shopify.svg?branch=master)](https://travis-ci.org/multidimension-al/oauth2-shopify)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/multidimension-al/oauth2-shopify/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/multidimension-al/oauth2-shopify/?branch=master)
 
@@ -14,17 +14,17 @@ This package provides Shopify's OAuth 2.0 support for the PHP League's [OAuth 2.
 To install, use composer:
 
 ```
-composer require multidimensional/oauth2-shopify
+composer require chadhutchins/oauth2-shopify
 ```
 
 ### Usage
 
-Usage is the same as The League's OAuth client, using `\Multidimensional\OAuth2\Client\Provider\Shopify` as the provider.
+Usage is the same as The League's OAuth client, using `\Chadhutchins\OAuth2\Client\Provider\Shopify` as the provider.
 
 ### Authorization Code Flow
 
 ```php
-$provider = new Multidimensional\OAuth2\Client\Provider\Shopify([
+$provider = new Chadhutchins\OAuth2\Client\Provider\Shopify([
     'clientId'          => '{shopify-app-id}',
     'clientSecret'      => '{shopify-app-secret}',
     'shop'              => 'example.myshopify.com',

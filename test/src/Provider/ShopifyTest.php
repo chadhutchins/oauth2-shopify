@@ -1,8 +1,8 @@
 <?php
 
-namespace Multidimensional\OAuth2\Client\Test\Provider;
+namespace Chadhutchins\OAuth2\Client\Test\Provider;
 
-use Multidimensional\OAuth2\Client\Provider\Shopify as ShopifyProvider;
+use Chadhutchins\OAuth2\Client\Provider\Shopify as ShopifyProvider;
 
 use Mockery as m;
 
@@ -181,7 +181,7 @@ class ShopifyTest extends \PHPUnit_Framework_TestCase
           }
         }', true);
 
-        $provider = m::mock('Multidimensional\OAuth2\Client\Provider\Shopify[fetchResourceOwnerDetails]')
+        $provider = m::mock('Chadhutchins\OAuth2\Client\Provider\Shopify[fetchResourceOwnerDetails]')
             ->shouldAllowMockingProtectedMethods();
 
         $provider->shouldReceive('fetchResourceOwnerDetails')
