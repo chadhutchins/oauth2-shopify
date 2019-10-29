@@ -24,19 +24,41 @@ class Shopify extends AbstractProvider
      */
     protected $accessType;
 
+    /**
+     * Constructs an OAuth 2.0 service provider.
+     *
+     * @param array $options An array of options to set on this provider.
+     *     Options include `clientId`, `clientSecret`, `redirectUri`, and `state`.
+     *     Individual providers may introduce more options, as needed.
+     * @param array $collaborators An array of collaborators that may be used to
+     *     override this provider's default behavior. Collaborators include
+     *     `grantFactory`, `requestFactory`, `httpClient`, and `randomFactory`.
+     *     Individual providers may introduce more collaborators, as needed.
+     */
+    public function __construct(array $options = [], array $collaborators = [])
+    {
+        parent::__construct($options, $collaborators);
+
+        if (empty($this->shop)) {
+            throw new Exception(
+                'No shop has been configured for this Shopify provider; it has to have a shop.'
+            );
+        }
+    }
+
     public function getBaseAuthorizationUrl()
     {
-        return 'https://'.$this->shop.'/admin/oauth/authorize';
+        return 'https://'.$this->shop.'.shopify.com/admin/oauth/authorize';
     }
 
     public function getBaseAccessTokenUrl(array $params)
     {
-        return 'https://'.$this->shop.'/admin/oauth/access_token';
+        return 'https://'.$this->shop.'.shopify.com/admin/oauth/access_token';
     }
 
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return 'https://'.$this->shop.'/admin/shop.json';
+        return 'https://'.$this->shop.'.shopify.com/admin/shop.json';
     }
 
     public function getAuthorizationParameters(array $options)
