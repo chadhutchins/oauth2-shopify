@@ -41,7 +41,9 @@ class Shopify extends AbstractProvider
 
         if (empty($this->shop)) {
             throw new IdentityProviderException(
-                'No shop has been configured for this Shopify provider; it has to have a shop.'
+                'No shop has been configured for this Shopify provider; it has to have a shop.',
+                0,
+                []
             );
         }
     }
