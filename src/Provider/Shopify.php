@@ -40,7 +40,7 @@ class Shopify extends AbstractProvider
         parent::__construct($options, $collaborators);
 
         if (empty($this->shop)) {
-            throw new Exception(
+            throw new IdentityProviderException(
                 'No shop has been configured for this Shopify provider; it has to have a shop.'
             );
         }
